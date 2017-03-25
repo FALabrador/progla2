@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	int a[4][3];
+	int totalOrder, row, col;
+	int reg=0, mon=0;
+	
+	for(int row=0; row<4; ++row){
+		for(int col=0; col<3; ++col){
+			cout << "Number of order for month " << col+1 << ": ";
+			cin >> a[row][col];
+		}
+	}
+	cout << endl;
+	for(int row=0; row<4; ++row){
+		cout << endl;
+		reg=row+1;
+		for(int col=0; col<3; ++col){
+			mon=col+1;
+			cout << "Region " << reg << " order for month " << mon << ": " << a[row][col] << endl;
+		}
+	}
+	
+}
+
+
+
+
+
+
+
+//totalOrder+=a[row][col]
