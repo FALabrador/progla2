@@ -4,7 +4,9 @@ using namespace std;
 int main(){
 	int a[4][3];
 	int totalOrder, row, col;
+	double totalAvg;
 	int reg=0, mon=0;
+	cout << "ITAM COMPANY\n";
 	
 	for(int row=0; row<4; ++row){
 		for(int col=0; col<3; ++col){
@@ -16,18 +18,22 @@ int main(){
 	for(int row=0; row<4; ++row){
 		cout << endl;
 		reg=row+1;
+		cout << "REGION " << reg << endl;
 		for(int col=0; col<3; ++col){
 			mon=col+1;
-			cout << "Region " << reg << " order for month " << mon << ": " << a[row][col] << endl;
+			cout << "Order for month " << mon << ": " << a[row][col] << endl;
 		}
 	}
 	
+	for(int row=0; row<4; ++row){
+		for(int col=0; col<3; ++col){
+		totalOrder+=a[row][col];
+		}	
+	}
+	cout << endl;
+	cout << "Total number of orders: " <<totalOrder<<endl;
+	totalAvg=totalOrder/4;
+	cout << "Total average of orders: "<<totalAvg<<endl;
+	return 0;
 }
 
-
-
-
-
-
-
-//totalOrder+=a[row][col]
